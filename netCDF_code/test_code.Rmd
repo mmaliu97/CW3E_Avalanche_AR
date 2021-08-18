@@ -1,0 +1,250 @@
+---
+title: "trial_plots"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+```{r}
+library(ncdf4) # package for netcdf manipulation
+library(raster) # package for raster manipulation
+library(rgdal) # package for geospatial analysis
+library(ggplot2) # package for plotting
+library(readr)
+```
+
+Start up SNOTELr
+```{r}
+library("DT")
+library("shinydashboard")
+library("leaflet")
+library("snotelr")
+library("zoo")
+library("plotly")
+library("dplyr")
+```
+
+Extracting data into a dataframe
+
+The dataframe will have the following
+1. start date
+2. end date
+3. precips
+4. SWE
+5. max temp
+6. min temp
+7. site_id
+```{r}
+# Initializing
+site_meta_data <- snotel_info() 
+
+all_sites_names = site_meta_data$site_id
+all_sites_names = all_sites_names[all_sites_names != 1091]
+all_sites_names = all_sites_names[all_sites_names != 201]
+all_sites_names = all_sites_names[all_sites_names != 1300]
+all_sites_names = all_sites_names[all_sites_names != 1301]
+ncpath <- "D:/UC DAVIS/CW3E/data/avalanche_data/nc_Data1/"
+```
+
+```{r}
+for (x in 1:length(all_sites_names)){
+    #### Define path location
+    df <- snotel_download(site_id = all_sites_names[x], internal = TRUE)
+    
+    ncname <- paste("snotel_",all_sites_names[x],'_', df$date[1],'_', df$date[nrow(df)], sep = "")
+    
+    ncfname <- paste(ncpath, ncname, ".nc", sep="")
+  
+    
+    #### Define dimensions
+    dimDate <- ncdim_def("Date"," ",as.numeric(as.Date(df$date))) 
+    fillvalue <- 1e32
+    #dimnchar <- ncdim_def("nchar", "", 1:length(df$date), create_dimvar=FALSE )
+    
+    #### define variables
+    temp_max <- ncvar_def(name='Temp_Max', units='Celcius', dim=list(dimDate), fillvalue, longname='Temperature Max', prec='double')
+    
+    temp_min <- ncvar_def(name='Temp_Min', units='Celcius', dim=list(dimDate), fillvalue, longname='Temperature Min', prec='double')
+    
+    SWE <- ncvar_def(name='SWE', units='mm', dim=list(dimDate), fillvalue, longname='Snow Water Equivalent', prec='double')
+    
+    precip <- ncvar_def(name='Precipitation', units='mm', dim=list(dimDate), fillvalue, longname='Precipitation', prec='double')
+    
+    precip_cum <- ncvar_def(name='Cumulative_Precipitation', units='mm', dim=list(dimDate), fillvalue, longname='Cumulative Precipitation', prec='double')
+    
+    londim <- ncvar_def(name='Longitude', units='Degrees_East', dim=list(dimDate), fillvalue, longname='Longitude', prec='double')
+    
+    latdim <- ncvar_def(name='Latitude', units='Degrees_North', dim=list(dimDate), fillvalue, longname='Latitude', prec='double')
+    
+    vars <- list(temp_max, temp_min, SWE, precip, precip_cum,londim, latdim)
+    
+    #### Creating the file
+    
+    ncout <- nc_create(ncfname,vars)
+    
+    #### put variables
+    ncvar_put(ncout,temp_max,df$temperature_max)
+    ncvar_put(ncout,temp_min,df$temperature_min)
+    ncvar_put(ncout,SWE,df$snow_water_equivalent)
+    ncvar_put(ncout,precip,df$precipitation)
+    ncvar_put(ncout,precip_cum,df$precipitation_cumulative)
+    ncvar_put(ncout,londim,df$longitude)
+    ncvar_put(ncout,latdim,df$latitude)
+    
+    #### put additional attributes into dimension and data variables
+    ncatt_put(ncout,"Date","axis","T")
+    
+    #### add global attributes
+    ncatt_put(ncout,0,"site_id",df$site_id[1])
+    ncatt_put(ncout,0,"State",df$state[1])
+    ncatt_put(ncout,0,"Elevation",df$elev[1])
+    ncatt_put(ncout,0,"Start Date",df$date[1])
+    
+    
+    # Get a summary of the created file:
+    ncout
+
+}
+
+
+```
+```{r}
+df <- snotel_download(site_id = 963, internal = TRUE)
+    
+ncname <- paste("snotel_",'963','_', df$date[1],'_', df$date[nrow(df)], sep = "")
+
+ncfname <- paste(ncpath,ncname, ".nc", sep="")
+
+
+#### Define dimensions
+dimDate <- ncdim_def("Date"," ",as.numeric(as.Date(df$date))) 
+fillvalue <- 1e32
+
+#### define variables
+temp_max <- ncvar_def(name='Temp_Max', units='Celcius', dim=list(dimDate), fillvalue, longname='Temperature Max', prec='double')
+
+temp_min <- ncvar_def(name='Temp_Min', units='Celcius', dim=list(dimDate), fillvalue, longname='Temperature Min', prec='double')
+
+SWE <- ncvar_def(name='SWE', units='mm', dim=list(dimDate), fillvalue, longname='Snow Water Equivalent', prec='double')
+
+precip <- ncvar_def(name='Precipitation', units='mm', dim=list(dimDate), fillvalue, longname='Precipitation', prec='double')
+
+precip_cum <- ncvar_def(name='Cumulative_Precipitation', units='mm', dim=list(dimDate), fillvalue, longname='Cumulative Precipitation', prec='double')
+
+londim <- ncvar_def(name='Longitude', units='Degrees_East', dim=list(dimDate), fillvalue, longname='Longitude', prec='double')
+
+latdim <- ncvar_def(name='Latitude', units='Degrees_North', dim=list(dimDate), fillvalue, longname='Latitude', prec='double')
+
+#vardate <- ncvar_def("vardate", "", list(dimnchar, dimDate), prec="char" )
+
+vars <- list(temp_max, temp_min, SWE, precip, precip_cum,londim, latdim)
+
+#### Creating the file
+
+ncout <- nc_create(ncfname,vars)
+
+#### put variables
+ncvar_put(ncout,temp_max,df$temperature_max)
+ncvar_put(ncout,temp_min,df$temperature_min)
+ncvar_put(ncout,SWE,df$snow_water_equivalent)
+ncvar_put(ncout,precip,df$precipitation)
+ncvar_put(ncout,precip_cum,df$precipitation_cumulative)
+ncvar_put(ncout,latdim,df$longitude)
+ncvar_put(ncout,londim,df$latitude)
+#ncvar_put(ncout,vardate, df$date, verbose=TRUE )
+
+#### put additional attributes into dimension and data variables
+ncatt_put(ncout,"Date","axis","T")
+
+#### add global attributes
+ncatt_put(ncout,0,"site_id",df$site_id[1])
+ncatt_put(ncout,0,"State",df$state[1])
+ncatt_put(ncout,0,"Elevation",df$elev[1])
+
+
+# Get a summary of the created file:
+ncout
+
+
+```
+
+
+```{r}
+climate_filepath <- paste0("D:/UC DAVIS/CW3E/data/avalanche_data/nc_Datasnotel_667_10011981-05031021.nc")
+climate_output <- nc_open(climate_filepath)
+
+ncpath <- "D:/UC DAVIS/CW3E/data/avalanche_data/"
+ncname <- "nc_Datasnotel_667_10011981-05031021"  
+ncfname <- paste(ncpath, ncname, ".nc", sep="")
+dname <- "tmp"  # note: tmp means temperature (not temporary)
+
+ncin <- nc_open(ncfname)
+print(ncin)
+```
+
+
+```{r}
+carSpeeds <- read.csv(file = 'D:/UC DAVIS/CW3E/data/avalanche_data')
+
+
+as.numeric(as.Date(df$date[1])) + 719529
+
+```
+
+```{r}
+avalanche_coords <- read.csv(file = 'D:/UC DAVIS/CW3E/data/avalanche_data/avalanche_coords.csv')
+
+as.numeric(as.Date(avalanche_coords$date[2]))
+
+#converting all dates to datnum
+avalanche_coords$date = as.numeric(as.Date(avalanche_coords$date))
+
+#writing converted csv file
+write.csv(avalanche_coords, file = 'D:/UC DAVIS/CW3E/data/avalanche_data/avalanche_coords_full_datenum.csv')
+
+```
+
+```{r}
+### Library to install if needed
+library(ncdf4)
+
+#### Variable long name (IVT as an example)
+inVar = "IVT"
+dlname = "Integrated Water Vapor Transport"
+dUnit = "kg/m/s"
+
+#### Time units to write. SET inTime data as julian days (JD). The JD start day "1800-01-01" is by default.
+#### For example if your JD start day is the first day of IVT observations and you have 365 day time series, your inTime would be 1,2,...,365
+timeUnits = paste0("minutes since 1800-01-01 00:00:00")
+times = as.double(inTime*24*60)
+
+#### define dimensions for IVT (lon, lat, time)
+dimList = c()
+londim <- ncdim_def("lon", "degrees_east", as.double(inLon), longname = "longitude") 
+latdim <- ncdim_def("lat", "degrees_north", as.double(inLat), longname = "latitude") 
+timedim <- ncdim_def("time", timeUnits, times, calendar = "standard", longname = "time")
+  
+#### define variables
+fillvalue <- -999.
+dimList = c()
+dimList = list(londim, latdim, timedim)
+data.def <- ncvar_def(inVar, dUnit, dimList, fillvalue, dlname, prec="single")
+
+#### create netCDF file and put arrays. Set a "ncfname" - the location where you want to write your file to including the file name
+ncout <- nc_create(ncfname, data.def)
+  
+#### put the variables (IVT.data as and example)
+ncvar_put(ncout, data.def, IVT.data)
+
+##### put additional attributes into dimension and data variables
+ncatt_put(ncout, "lon", "standard_name", "longitude")
+ncatt_put(ncout, "lat", "standard_name", "latitude")
+ncatt_put(ncout, "time", "standard_name", "time")
+
+# close the file
+nc_close(ncout)
+  
+```
