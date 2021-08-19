@@ -1,0 +1,143 @@
+﻿state,date,lat,lon,site_name
+MT,11/26/2014,45.04,-109.94,"Near Henderson Peak, Cooke City, Montana"
+AK,12/6/2014,63.32,-145.66,"Rainbow Ridge area, Delta Range"
+CO,12/31/2014,39.65,-105.8,Kelso Mountain
+CO,1/6/2015,37.8,-107.65,"Kendall Mountain, Rabbit Ears/Arcade"
+CO,2/23/2015,39.17,-106.82,West side of Aspen Mountain - Peter Barker run/slide path
+UT,3/4/2015,41.22,-111.87,"Hell's Canyon, near Snowbasin Ski Resort"
+AK,3/14/2015,63.27,-149.44,"Squaw Creek, near Cantwell"
+AK,4/1/2015,61.19,-144.35,"North of Tebay Lakes, Wrangell-St. Elias National Park and Preserve"
+MT,4/11/2015,45.36,-111.41,"Beehive Peak, northern Madison Range"
+WY,5/17/2015,43.84,-110.77,Mount Moran
+CA,11/5/2015,36.59,-118.29,"Mt Russell, John Muir Wilderness"
+AK,11/22/2015,61.78,-149.3,"Eldorado Bowl, Hatcher Pass"
+MT,12/19/2015,48.34,-113.47,"Sheep Mountain, north of Cooke City"
+WA,12/19/2015,47.44,-121.38,Kendall Peak
+WA,12/31/2015,47.41,-121.49,Granite Mountain near Snoqualmie Pass
+AK,1/2/2016,61.75,-149.41,"Grubstake Gulch, southwest of Hatcher Pass"
+CA,1/14/2016,39.3,-120.33,Backcountry near Sugar Bowl Ski Resort
+AK,1/16/2016,61.78,-149.3,"Skyscraper Mountain, Hatcher Pass"
+CO,1/16/2016,39.83,-105.65,"St Marys Lake, Front Range"
+MT,1/19/2016,45.29,-111.44,"Cedar Basin, west of Big Sky"
+WY,1/19/2016,43.55,-110.88,"Pyramid Peak, Teton Range"
+CO,1/21/2016,38.89,-106.95,"Ruby Peak, Ruby Range west of Crested Butte"
+UT,1/21/2016,40.6,-111.64,"Gobblers Knob, Big Cottonwood Canyon"
+CO,1/22/2016,37.9,-107.7,"Red Mountain, Clear Creek County"
+MT,1/23/2016,48.86,-114.62,"Swede Creek area, Whitefish Range"
+WA,1/24/2016,48.86,-121.69,"Mt Herman, northeast of Mount Baker"
+WY,1/24/2016,43.59,-110.88,"Rock Springs drainage, south of Jackson Hole Mountain Resort"
+ID,1/31/2016,43.56,-93.42,Twin Lakes near Brundage Mountain
+UT,1/31/2016,40.68,-111.6,"Willow Draw near Park City Mountain Resort, Utah"
+CO,2/2/2016,37.49,-106.71,"Lost Mine Creek, east of Wolf Creek Pass"
+CO,2/5/2016,38.83,-106.41,"Cottonwood Pass, west of Buena Vista"
+WY,2/19/2016,44.66,-107.51,Big Horn Mountains near Sheridan Wyoming
+WY,2/21/2016,43.79,-110.93,Grand Targhee Resort
+ID,2/26/2016,44.9,-111.37,Island Park
+AK,2/27/2016,61.61,-146.65,Nelchina Glacier area
+OR,3/8/2016,45.2,-117.32,"Chief Joseph Peak, Wallowa Mountains"
+OR,3/22/2016,43.16,-122.22,Cat Ski Mount Bailey
+AK,4/3/2016,63.14,-145.55,"Summit Lake area, Eastern Alaska Range"
+AK,4/11/2016,63.14,-145.55,"Summit Lake area, Eastern Alaska Range"
+NV,12/10/2016,39.32,-119.88,Mt. Rose Chutes - Closed Area
+MT,12/11/2016,45.05,-109.92,"Henderson Mountain, near Cooke City"
+WY,12/23/2016,43.78,-110.92,East of Grand Targee Resort
+WA,12/27/2016,46.62,-121.39,West of White Pass Ski Area
+WA,1/4/2017,46.91,-121.49,"Near Crystal Mountain, south of Greenwater"
+MT,1/5/2017,48.66,-113.9,"Mt. Stanton, north of West Glacier"
+AK,1/28/2017,60.35,-149.67,"Near Cooper Landing, Kenai Peninsula"
+ID,2/9/2017,43.15,-111.11,"McCoy Creek, Caribou Range east of Idaho Falls"
+CO,2/14/2017,40.07,-107.24,"Near West Lost Lake, Flat Tops Wilderness area"
+WA,3/4/2017,47.45,-121,"Hawkins Mountain, north of Cle Elum"
+AK,4/1/2017,64.75,-147.35,North Pole
+WA,4/11/2017,47.45,-121.39,"Red Mountain, north of Snoqualmie Pass"
+MT,10/7/2017,44.99,-111.45,"Imp Peak, southern Madison Range"
+AK,11/22/2017,61.78,-149.24,"Marmot Mountain, Hatcher Pass"
+WY,12/29/2017,42.59,-110.73,"Commissary Ridge, Salt River Range"
+MT,1/2/2018,44.92,-111.26,"Cabin Creek, southern Madison Range"
+ID,1/10/2018,44.54,-111.5,"Northwest of Reas Peak, Centennial Range"
+ID,1/20/2018,44.52,-111.54,"Southeast of Reas Peak, Centennial Range"
+CO,1/21/2018,37.87,-107.72,"South of Red Mountain Pass, Sam's Trees"
+MT,2/17/2018,48.51,-114.31,"Canyon Creek, Whitefish Range"
+WY,2/17/2018,43.59,-110.88,"Ralph's Slide, Upper Rock Springs Canyon near Wilson"
+ID,2/20/2018,43.37,-111.14,"Sheep Creek, west of Palisades"
+AK,2/25/2018,55.42,-131.62,"Dude Mountain, north of Ketchikan"
+WA,2/25/2018,47.35,-121.44,Stampede Pass
+WA,2/25/2018,47.46,-121.45,Snoqualmie Pass
+WA,3/3/2018,47.44,-120.94,"North Fork Teanaway, north of Cle Elum"
+CA,3/4/2018,38.69,-120.07,Near Kirkwood Ski Resort
+WA,3/4/2018,48.69,-120.45,"Setting Sun Mountain, north of the Methow Valley"
+WA,3/10/2018,48.72,-121.86,"Park Butte, south of Mount Baker"
+CO,4/8/2018,39.14,-106.88,"Maroon Bowl, west of Aspen Highlands"
+CO,4/10/2018,39.49,-105.89,"Northwest of Glacier Peak, Middle Fork Swan River"
+MT,4/14/2018,45.79,-110.94,"Saddle Peak, Bridger Range"
+WY,4/22/2018,43.71,-110.38,"Northwest of East Leidy Mountain, west of Togwotee Pass"
+AK,5/2/2018,60.57,-148.81,"Upper Blackstone Glacier, south of Whittier"
+WY,12/22/2018,42.94,-110.59,"Horse Creek, Wyoming Range"
+CO,1/5/2019,37.91,-107.73,"Upper Senator Beck Basin, northwest of Red Mountain Pass"
+MT,1/5/2019,47.92,-112.81,"South Waldron Creek, north of Teton Peak"
+WY,1/9/2019,43.72,-110.4,"Mount Leidy, southwest of Togwotee Pass"
+NM,1/17/2019,36.6,-105.45,Taos Ski Valley
+UT,1/18/2019,39.63,-111.25,"Electric Lake, Manti Skyline"
+CO,1/21/2019,39.03,-106.78,"Green Mountain, Express Creek"
+ID,1/25/2019,43.43,-111.06,"Upper Palisades Lake, Snake River Range"
+MT,1/25/2019,45.54,-112,"Near Bell Lake, Tobacco Root Mountains"
+UT,1/25/2019,38.45,-109.23,"East Face Laurel Peak, La Sal Mountains"
+UT,2/7/2019,38.2,-112.4,"Circleville Mountain, Tushar Mountains"
+UT,2/9/2019,40.86,-111.01,"Humpy Peak, western Uinta Mountains"
+CO,2/16/2019,38.9,-106.87,"Pearl Pass Road, Brush Creek Drainage"
+CO,2/19/2019,37.91,-107.81,"Temptation avalanche path, Bear Creek, south of Telluride"
+MT,2/26/2019,45.81,-110.93,"Truman Gulch, Bridger Range"
+CO,3/3/2019,37.84,-107.86,"Base Camp above Matterhorn Nordic trailhead, northeast of Lizard Head Pass"
+WY,3/4/2019,43.8,-110.1,"Breccia Cliffs, northwest of Togwotee Pass"
+CO,3/7/2019,39.78,-105.87,"Point 12118, east of Jones Pass"
+AK,3/9/2019,60.45,-149.49,"Near Crescent Lake, Kenai Peninsula"
+CO,3/9/2019,38.8,-106.89,Crested Butte South
+WY,3/11/2019,42.85,-106.33,Casper
+AK,3/13/2019,59.27,-135.52,"Lutak Inlet, north of Haines"
+CO,12/8/2019,40.52,-105.91,"Diamond Peaks, west of Cameron Pass"
+UT,12/15/2019,40.65,-111.59,"Dutch Draw, Park City Ridgeline"
+MT,1/1/2020,47.23,-113.69,"Near Lake Dinah, west of Seeley Lake"
+ID,1/7/2020,47.49,-116.14,"Wardner Peak, Bitterroot Mountains"
+OR,1/11/2020,44.86,-118.19,"Rock Creek, Elkhorn Mountains"
+ID,1/15/2020,43.69,-114.66,"Baker Creek drainage, Smoky Mountains"
+CA,1/17/2020,39.16,-120.23,"Scott Peak, west of Lake Tahoe"
+CO,1/18/2020,37.98,-107.66,"Uncompahgre Gorge, south of Ouray"
+UT,1/18/2020,40.98,-111.82,"Farmington Canyon, east of Farmington"
+WA,1/23/2020,47.48,-120.66,Near Blewett Pass
+AK,2/10/2020,60.32,-149.61,"Boulder Creek Drainage, South of Cooper Landing"
+CO,2/15/2020,39.69,-106.47,"South Fork of Dickson Creek, east of Red and White Mountain"
+AK,2/25/2020,53.58,-166.89,Unalaska Island
+AK,3/9/2020,61.76,-149.24,Near Hatcher Pass
+ID,3/15/2020,42.78,-112.15,North of Skyline Peak
+WY,4/1/2020,43.53,-110.98,"Taylor Mountain, northwest of Teton Pass"
+ID,4/3/2020,43.38,-111.09,"Austin Canyon, Snake River Range"
+CO,4/15/2020,39.65,-106.16,"Point 12885 near Red Peak, west of Silverthorne"
+CO,4/28/2020,38.9,-107.03,"Mount Emmons, west of Crested Butte"
+CO,12/18/2020,38.84,-107.1,"Near Ohio Pass, Anthracite Range"
+WY,12/18/2020,42.58,-110.75,"Near Sheep Pass, Salt River Range"
+CO,12/19/2020,37.84,-107.75,"North Face of Battleship, southeast of Ophir"
+CO,12/26/2020,39.83,-105.77,"First Creek, north of Berthoud Pass"
+UT,1/8/2021,40.65,-111.59,"Dutch Draw, Park City Ridgeline"
+UT,1/30/2021,40.67,-111.6,"Squaretop, Park City Ridgeline"
+CO,2/1/2021,37.85,-107.77,"The Nose, Middle Fork Mineral Creek southeast of Ophir"
+AK,2/2/2021,61.42,-149.39,"Bear Mountain, Chugach State Park"
+CA,2/3/2021,41.39,-122.98,"Etna Summit, west of Etna"
+CO,2/4/2021,39.61,-106.3,"Marvin’s West, East Vail backcountry southeast of Vail"
+MT,2/6/2021,48.2,-113.96,"Wounded Buck Creek, northwest of Wildcat Lake"
+UT,2/6/2021,40.63,-111.67,"Wilson Glade, Mill Creek Canyon"
+WA,2/8/2021,47.35,-121.19,"Knox Creek, Salmon la Sac area, near Cle Elum Lake"
+CO,2/14/2021,39.92,-105.69,"Pumphouse Lake, southwest of Rollins Pass"
+CO,2/14/2021,39.69,-105.89,"Near Mount Trelease, north of Loveland Pass"
+MT,2/14/2021,45.33,-111.38,"Beehive Basin, north of Big Sky Montana"
+CO,2/16/2021,40.35,-105.97,"West of Ruby Mountain, southeast of Rand"
+WY,2/17/2021,43.09,-110.92,"Squaw Creek Drainage, Southeast of Alpine, WY "
+WY,2/18/2021,43.75,-110.06,"Togwotee Pass, WY"
+ID,2/19/2021,43.81,-114.84,"Smiley Creek Drainage, Smoky Mountains"
+ID,2/20/2021,42.47,-111.55,"Near Sherman Peak, Southeast of Pocatello"
+NV,2/20/2021,40.57,-115.39,"Near Castle Lake, Ruby Mountains, Southeast of Elko"
+WY,2/22/2021,43.7,-110.79,"Broken Thumb Couloir, Peak 9,975 (25 Short), Grand Teton National Park"
+ID,2/27/2021,47.53,-115.84,"Tiger Peak, north of Burke"
+CA,3/20/2021,39.37,-120.33,"Frog Lake Cliffs, north of Donner Pass"
+CO,3/22/2021,39.58,-106.56,Lime Creek south of Edwards
+AK,3/27/2021,61.65,-147.67,Matanuska Glacier
+AK,5/13/2021,62.76,-150.64,"Ruth Glacier, Denali National Park and Preserve"
